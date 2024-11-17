@@ -1,0 +1,209 @@
+html {
+    font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+    color: #1E2F23;
+    background-color: #fefae0;
+}
+
+.hero {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+
+a:hover {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+nav ul a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #DDA15E;
+}
+
+.index-main {
+    text-align: center;
+    width: 70%;
+}
+
+.index-main article p {
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
+}
+
+.index-main article h3 {
+    letter-spacing: 2px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 40px;
+    background-color: #c4bc9c;
+}
+
+.main-image {
+    width: 17em;
+    margin-right: 10px;
+}
+
+aside {
+    width: 29%;
+    float: right;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.index-aside section {
+    border: 1px solid black;
+    padding-right: 2em;
+}
+
+.index-aside ul {
+    text-align: justify;
+}
+
+.index-aside li {
+    line-height: 2;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+.about-footer {
+    margin-top: 140px;
+}
+
+.contact-footer {
+    margin-top: 30px;
+}
+
+.gallery-footer {
+    margin-top: 160px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.about-section {
+    text-align: center;
+    margin: 3em 12cm;
+    background-color: #FFE8C2;
+    border: 1px solid black;
+    padding: 0 1em;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.about-section p {
+    line-height: 1.6;
+}
+
+.gallery-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-main img {
+    height: 500px;
+}
+
+.gallery-main section {
+    text-align: center;
+    margin-right:3em;
+    margin-top: 3em;
+}
+
+.gallery-main p {
+    text-align: center;
+}
+
+.contact-main {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 2em;
+}
+
+.radio-group {
+    text-align: center;
+}
+
+.container input {
+    padding: 3px;
+}
+
+button {
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 20%;
+    border: 1px solid black;
+    background-color: rgb(243, 171, 171);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.radio-group input {
+    margin-top: 1em;
+}
+
+.checkbox-group input {
+    margin-top: 1em;
+}
+
+.desmond-main {
+    text-align: center;
+    margin: 0 7cm;
+}
+
+.desmond-main p {
+    text-align: justify;
+    line-height: 1.6;
+    word-spacing: normal;
+}
+
+.desmond-aside {
+    margin-right: 15em;
+    border: 0;
+    width: 400px;
+}
+
+.young-desmond {
+   width: 320px; 
+}
+
+.info-heading {
+    color: #ff9f31;
+}
+
+.info-section {
+    margin-top: 3em;
+}
