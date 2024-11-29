@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mania</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <h1 class="main-title">Movie Mania</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Top Picks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main class="contact-main">
+
+        <!-- LOCATION INFORMATION -->
+        <section class="info-section location-section">
+            <h3 class="info-heading">Location:</h3>
+            <p>11th October St. 33a, Skopje</p>
+        </section>
+
+        <!-- WORKING HOURS SECTION -->
+        <section class="info-section working-hours-section">
+            <h3 class="info-heading">Working hours:</h3>
+            <p><b>Monday</b> - <b>Friday</b>: 8:00 AM - 4:00 PM </p>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section class="info-section form-section">
+            <h3 class="info-heading">Contact us:</h3>
+
+            <form>
+                <!-- NAME INPUT -->
+                <div class="name-container input-container">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <!-- EMAIL INPUT -->
+                <div class="email-container input-container">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- TEXT AREA -->
+                <div class="text-area-container input-container">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="2" placeholder="Write your message here"></textarea>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
