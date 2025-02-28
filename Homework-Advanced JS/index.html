@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced JavaScript Homework</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Advanced JavaScript Homework</h1>
+    <table id = "cars-table">
+        <thead>
+            <tr>
+                <th id = "type"><button type="button" id = "typeBtn" class="btn">▼</button>Type</th>
+                <th id = "brand"><button type="button" id = "brandBtn" class="btn">▼</button>Brand</th>
+                <th id = "model">Model <br> <input type="text" id = "modelInput" class="userInput" placeholder="Enter model"> <br> <p id = "ifModelExists"></p></th>
+                <th id = "doors">Doors <br> <input type="number" id = "doorsInput" class="userInput" placeholder="Enter number of doors"> <br> <p id = "ifNumOfDoorsExist"></p></th>
+                <th id = "gasType"><button type="button" id = "gasTypeBtn" class="btn">▼</button>Gas type</th>
+                <th id = "color">Color <br> <input type="text" id = "colorInput" class="userInput" placeholder="Enter color"> <br> <p id = "ifColorExists"></p></th>
+                <th id = "isNew">Is new <br> 
+                    <div>
+                        <input type="radio" id="newCar" name="oldOrNew" value="new"> 
+                        <label for="newCar" class="oldOrNewCar">New</label> <br>
+
+                        <input type="radio" id="oldCar" name="oldOrNew" value="old"> 
+                        <label for="oldCar" class="oldOrNewCar">Old</label> <br>
+
+                        <input type="radio" id="oldAndNewCars" name="oldOrNew" value="both" checked> 
+                        <label for="oldAndNewCars" class="oldOrNewCar">Both</label>
+                    </div>
+                </th>
+                <th id = "horsepower">Horsepower <br> <input type="number" id = "horsepowerInput" class="userInput" placeholder="80 - 300"> <br> <p id = "ifHorsepowerExists"></p></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
     <script src = "./script.js"></script>
 </body>
 </html>
