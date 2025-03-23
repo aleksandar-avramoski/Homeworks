@@ -11,8 +11,12 @@ A simple **Node.js API** using **Express.js** and **MongoDB** for storing and ma
 ## Installation
 
 1. Clone this repository
+```javascript
+git clone https://github.com/aleksandar-avramoski/Homeworks
+cd Homeworks/NodeHomework-4
+```
 
-2. Install Dependencies
+3. Install Dependencies
 
 ```javascript
 npm install
