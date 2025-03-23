@@ -3,13 +3,11 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.config.js";
 import router from "./routes/recipeRoutes.js";
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
 
-// Define the type of data
 app.use(express.json());
 
 // Routes
