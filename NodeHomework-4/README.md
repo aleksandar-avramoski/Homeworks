@@ -16,7 +16,7 @@ git clone https://github.com/aleksandar-avramoski/Homeworks
 cd Homeworks/NodeHomework-4
 ```
 
-3. Install Dependencies
+2. Install Dependencies
 
 ```javascript
 npm install
