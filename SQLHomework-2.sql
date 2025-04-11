@@ -47,76 +47,89 @@ SELECT
 	d.last_name
 FROM movies AS m
 INNER JOIN directors AS d
-ON m.movie_id = d.director_id;
+ON m.director_id = d.director_id;
 
 -- Show actors and their movies
 SELECT 
 	a.first_name,
 	a.last_name,
 	m.title
-FROM actors AS a
+FROM cast_members AS cm
+INNER JOIN actors AS a
+ON cm.actor_id = a.actor_id
 INNER JOIN movies AS m
-ON m.movie_id = a.actor_id;
+ON cm.movie_id = m.movie_id;
 
 -- Show movies and their genres
 SELECT 
 	m.title,
 	g.name
 FROM movies AS m
+INNER JOIN movie_genres as mg
+ON m.movie_id = mg.movie_id
 INNER JOIN genres AS g
-ON m.movie_id = g.genre_id;
+ON g.genre_id = mg.genre_id;
 
 -- Show users and their reviews
 SELECT 
 	u.username,
-	r.rating,
-	r.review_text
-FROM users AS u
-INNER JOIN reviews AS r
-ON u.user_id = r.review_id;
+	r.review_text,
+	r.rating
+FROM reviews AS r
+INNER JOIN users AS u
+ON r.user_id = u.user_id;
 
 -- Show movies and their locations
 SELECT 
 	m.title,
-	fl.city,
-	fl.country,
-	fl.specific_location
-FROM movies AS m
-INNER JOIN movie_locations AS fl
-ON m.movie_id = fl.location_id;
+	ml.city,
+	ml.country,
+	ml.specific_location
+FROM movie_locations AS ml
+INNER JOIN movies AS m
+ON m.movie_id = ml.movie_id;
 
 -- Show movies and their production companies
 SELECT 
 	m.title,
 	pc.name
 FROM movies AS m
+INNER JOIN movie_production_companies  AS mpc
+ON m.movie_id = mpc.movie_id
 INNER JOIN production_companies AS pc
-ON m.movie_id = pc.company_id;
+ON pc.company_id = mpc.company_id;
 
 -- Show actors and their awards
 SELECT 
-	a.first_name,
-	a.last_name,
-	aw.award_type
+    a.first_name,
+    a.last_name,
+    ads.award_type
 FROM actors AS a
-INNER JOIN awards AS aw
-ON a.actor_id = aw.award_id;
+INNER JOIN actor_awards AS aw
+ON a.actor_id = aw.actor_id
+INNER JOIN awards AS ads
+ON ads.award_id = aw.award_id;
 
 -- Show movies and their awards
 SELECT 
 	m.title,
-	aw.name
+	aw.name,
+	aw.award_type
 FROM movies AS m
+INNER JOIN movie_awards AS ma
+On m.movie_id = ma.movie_id
 INNER JOIN awards AS aw
-ON m.movie_id = aw.award_id; 
+ON aw.award_id = ma.award_id; 
 
 -- Show users and their watchlist movies
 SELECT 
 	u.username,
-	uw.movie_id
+	m.title
 FROM users AS u
 INNER JOIN user_watchlist AS uw
-ON u.user_id = uw.movie_id;
+ON u.user_id = uw.user_id
+INNER JOIN movies AS m
+ON m.movie_id = uw.movie_id;
 
 -- Show movies and their revenues
 SELECT 
@@ -137,17 +150,19 @@ SELECT
 	d.last_name
 FROM movies AS m
 INNER JOIN directors as d
-ON m.movie_id = d.director_id
-WHERE rating = 'PG-13';
+ON m.director_id = d.director_id
+WHERE m.rating = 'R';
 
 -- Show all movies from 2019 and their genres
 SELECT 
 	m.title,
 	g.name
 FROM movies AS m
+INNER JOIN movie_genres AS mg
+ON m.movie_id = mg.movie_id
 INNER JOIN genres AS g
-ON m.movie_id = g.genre_id
-WHERE release_date BETWEEN '2019-01-01' AND '2019-12-31';
+ON g.genre_id = mg.genre_id
+WHERE m.release_date BETWEEN '2019-01-01' AND '2019-12-31';
 
 -- Show all American actors and their movies
 SELECT 
@@ -155,8 +170,10 @@ SELECT
 	a.last_name,
 	m.title
 FROM actors AS a
+INNER JOIN cast_members AS cm
+ON a.actor_id = cm.actor_id
 INNER JOIN movies AS m
-ON a.actor_id = m.movie_id
+ON m.movie_id = cm.movie_id
 WHERE a.nationality = 'American';
 
 -- Show all movies with a budget over 100M and their production companies
@@ -164,6 +181,8 @@ SELECT
 	m.title,
 	pc.name
 FROM movies AS m
+INNER JOIN movie_production_companies AS mpc
+ON m.movie_id = mpc.movie_id
 INNER JOIN production_companies AS pc
 ON m.movie_id = pc.company_id
 WHERE m.budget > 100000000;
@@ -172,23 +191,14 @@ WHERE m.budget > 100000000;
 SELECT 
 	m.title,
 	d.first_name,
-	d.last_name
+	d.last_name,
+	ml.city
 FROM movies AS m
-INNER JOIN directors AS d
-ON m.movie_id = d.director_id
-WHERE m.budget > 100000000;
-
--- Show all movies filmed in 'London' and their directors
-SELECT 
-	m.title,
-	d.first_name,
-	d.last_name
-FROM movies AS m
-INNER JOIN directors AS d
-ON m.movie_id = d.director_id
 INNER JOIN movie_locations AS ml
-ON m.movie_id = ml.location_id
-WHERE city = 'London';
+ON m.movie_id = ml.movie_id
+INNER JOIN directors AS d
+ON m.director_id = d.director_id
+WHERE ml.city = 'London';
 
 -- Show all horror movies and their actors
 SELECT 
@@ -196,19 +206,26 @@ SELECT
 	a.first_name,
 	a.last_name
 FROM movies AS m
-INNER JOIN actors AS a
-ON m.movie_id = a.actor_id
+INNER JOIN movie_genres AS mg
+ON m.movie_id = mg.movie_id
 INNER JOIN genres AS g
-ON m.movie_id = g.genre_id
+ON g.genre_id = mg.genre_id
+INNER JOIN cast_members AS cm
+ON m.movie_id = cm.movie_id
+INNER JOIN actors AS a
+ON a.actor_id = cm.actor_id
 WHERE g.name = 'Horror';
 
 -- Show all movies with reviews rated 5 and their reviewers
 SELECT 
 	m.title,
-	r.review_text
+	u.username,
+	r.rating
 FROM movies AS m
 INNER JOIN reviews AS r
-ON m.movie_id = r.review_id
+ON m.movie_id = r.movie_id
+INNER JOIN users AS u
+ON u.user_id = r.user_id
 WHERE r.rating = 5;
 
 -- Show all British directors and their movies
@@ -218,26 +235,31 @@ SELECT
 	m.title
 FROM directors AS d
 INNER JOIN movies AS m
-ON d.director_id = m.movie_id
-WHERE nationality = 'British';
+ON d.director_id = m.director_id
+WHERE d.nationality = 'British';
 
 -- Show all movies longer than 180 minutes and their genres
 SELECT
 	m.title,
 	g.name
 FROM movies AS m
+INNER JOIN movie_genres AS mg
+ON m.movie_id = mg.movie_id
 INNER JOIN genres AS g
-ON m.movie_id = g.genre_id
-WHERE duration_minutes > 180;
+ON g.genre_id = mg.genre_id
+WHERE m.duration_minutes > 180;
 
 -- Show all Oscar-winning movies and their directors
 SELECT 
 	m.title,
 	d.first_name,
-	d.last_name
+	d.last_name,
+	a.award_type
 FROM movies AS m
 INNER JOIN directors AS d
-ON m.movie_id = d.director_id
+ON m.director_id = d.director_id
+INNER JOIN movie_awards AS ma
+ON m.movie_id = ma.movie_id
 INNER JOIN awards AS a
-ON m.movie_id = a.award_id
-WHERE award_type = 'Oscar';
+ON a.award_id = ma.award_id
+WHERE a.award_type = 'Oscar';
