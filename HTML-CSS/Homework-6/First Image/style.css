@@ -1,0 +1,75 @@
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 7em auto;
+    border: 6px solid black;
+}
+
+.red-block {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: 0;
+    background-color: red;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+}
+
+.first-wheat-block {
+    position: absolute;
+    width: 151px;
+    height: 150px;
+    background-color: antiquewhite;
+    border-bottom: 20px solid black;
+}
+
+.second-wheat-block {
+    position: absolute;
+    width: 151px;
+    height: 170px;
+    background-color: antiquewhite;
+    border-bottom: 10px solid black;
+    right: 349px;
+    top: 170px;
+}
+
+.blue-block {
+    position: absolute;
+    width: 151px;
+    height: 150px;
+    background-color: blue;
+    right: 340px;
+    top: 349.8px;
+    border-right: 10px solid black;
+}
+
+.third-wheat-block {
+    position: absolute;
+    width: 310px;
+    height: 150px;
+    background-color: antiquewhite;
+    right: 20px;
+    top: 349.8px;
+    border-right: 10px solid black;
+}
+
+.fourth-wheat-block {
+    position: absolute;
+    width: 20px;
+    height: 65px;
+    background-color: antiquewhite;
+    top: 349.8px;
+    right: 0;
+    border-bottom: 10.4px solid;
+}
+
+.yellow-block {
+    position: absolute;
+    width: 20px;
+    height: 65px;
+    background-color: yellow;
+    right: 0;
+    bottom: 0;
+    border-top: 10.4px solid black;
+}

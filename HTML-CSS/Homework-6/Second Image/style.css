@@ -1,0 +1,214 @@
+.container {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 7em auto;
+}
+
+.one-block {
+  position: absolute;
+  left: 0;
+  width: 130px;
+  height: 50px;
+  background-color: rgb(212, 241, 254);
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
+.two-block {
+  position: absolute;
+  left: 140px;
+  width: 210px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
+.three-block {
+  position: absolute;
+  right: 39px;
+  width: 201px;
+  height: 50px;
+  background-color: rgb(251, 199, 101);
+  border-bottom: 10px solid black;
+}
+
+.four-block {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 379px;
+  background-color: rgb(221, 247, 221);
+  border-left: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
+.five-block {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 70px;
+  height: 120px;
+  background-color: rgb(221, 247, 221);
+  border-bottom: 10px solid black;
+  border-right: 5px solid black;
+}
+
+.six-block {
+  position: absolute;
+  left: 74px;
+  top: 60px;
+  width: 272px;
+  height: 260px;
+  background-color: red;
+  border-left: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
+.seven-block {
+  position: absolute;
+  right: 50px;
+  top: 60px;
+  width: 190px;
+  height: 120px;
+  background-color: rgb(251, 199, 101);
+  border-bottom: 10px solid black;
+}
+
+.eight-block {
+  position: absolute;
+  right: 141px;
+  top: 189px;
+  width: 90px;
+  height: 131px;
+  background-color: silver;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
+.nine-block {
+  position: absolute;
+  right: 50px;
+  top: 189px;
+  width: 91px;
+  height: 131px;
+  background-color: rgb(243, 234, 222);
+  border-bottom: 10px solid black;
+}
+
+.ten-block {
+  position: absolute;
+  left: 0;
+  top: 189px;
+  width: 70px;
+  height: 190px;
+  background-color: rgb(229, 229, 251);
+  border-bottom: 10px solid black;
+  border-right: 5px solid black;
+}
+
+.eleven-block {
+  position: absolute;
+  left: 75px;
+  top: 329px;
+  width: 136px;
+  height: 100px;
+  background-color: black;
+  border-bottom: 10px solid black;
+  border-left: 5px solid black;
+}
+
+.twelve-block {
+  position: absolute;
+  left: 211px;
+  top: 329px;
+  width: 135px;
+  height: 50px;
+  background-color: silver;
+  border-bottom: 10px solid black;
+  border-left: 5px solid black;
+  border-right: 10px solid black;
+}
+
+.thirteen-block {
+  position: absolute;
+  right: 40px;
+  top: 329px;
+  width: 191px;
+  height: 50px;
+  background-color: rgb(249, 249, 249);
+  border-bottom: 10px solid black;
+  border-right: 10px solid black;
+}
+
+.fourteen-block {
+  position: absolute;
+  left: 0px;
+  top: 389px;
+  width: 70px;
+  height: 111px;
+  background-color: rgb(251, 199, 101);
+  border-right: 10px solid black;
+}
+
+.fifteen-block {
+  position: absolute;
+  left: 80px;
+  top: 438px;
+  width: 126px;
+  height: 62px;
+  background-color: rgb(248, 239, 239);
+  border-right: 10px solid black;
+}
+
+.sixsteen-block {
+  position: absolute;
+  left: 216px;
+  top: 388px;
+  width: 135px;
+  height: 45px;
+  background-color: rgb(248, 239, 239);
+  border-right: 10px solid black;
+}
+
+.seventeen-block {
+  position: absolute;
+  left: 216px;
+  top: 433px;
+  width: 135px;
+  height: 45px;
+  background-color: black;
+  border-right: 10px solid black;
+}
+
+.eighteen-block {
+  position: absolute;
+  left: 216px;
+  top: 470px;
+  width: 334px;
+  height: 20px;
+  background-color: rgb(236, 233, 233);
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+}
+
+.nineteen-block {
+  position: absolute;
+  left: 359px;
+  top: 388px;
+  width: 191px;
+  height: 82px;
+  background-color: darkblue;
+  border-right: 10px solid black;
+}
+
+.twenty-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 112px;
+  background-color: crimson;
+}

@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    background: #1e1e1e;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-media-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0.5em;
+    font-size: larger;
+    background-color: white;
+    border-radius: 5px;
+    width: 180px;
+    margin: 1em auto;
+}
+
+.contact-main {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.submit-button {
+    margin-top: 3em;
+    padding: 1em;
+    border-radius: 20%;
+    border: 1px solid black;
+    background-color: orangered;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: rgb(170, 33, 33);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+.info-heading {
+    color: orangered;
+    margin-bottom: 1em;
+}
+
+.info-section {
+    margin-top: 2em;
+}
+
+.input-container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container input {
+    padding: 5px;
+}
+
+.input-container label {
+    margin-right: 0.5em;
+}
+
+.main-title {
+    color:orangered;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 110, 57);
+}
+
+.social-media-links a {
+    color: black;
+}
+
+footer {
+    margin-top: 3em;
+    text-align: center;
+    font-size: small;
+}
+
+.trailer {
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5em;
+    margin-top: 1em;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+header {
+    margin-top: 1em;
+}
+
+.featured-movie-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./Images/HacksawRidge-Image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-section {
+    padding: 1em 1em;
+    line-height: 1.8;
+    background-color: #2c2c2c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.5s ease;
+    border-radius: 3px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-section:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.568); 
+    transform: translateY(-3px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.trailer-link,
+.genre,
+.rating,
+.year-of-release {
+    margin-top: auto;
+}
+
+.movie-title {
+    line-height: 1.5;
+    color: rgb(255, 110, 57);
+}
+
+.trailer-button {
+    padding: 0.6em;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5em;
+}
+
+.trailer-button:hover {
+    background-color: rgb(170, 33, 33);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-movie-title {
+        font-size: 28px;
+    }
+
+    nav {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: smaller;
+        gap: 3em;
+    }
+
+    li {
+        margin: 0.5em;
+        list-style-type: none;
+        font-size: larger;
+        font-weight: 600;
+        transition: transform 0.4s ease;
+    }
+
+    li:hover {
+        transform: scale(1.1);
+    }
+
+
+    .main-movie-title,
+    .release-year,
+    .movie-description,
+    .trailer-button {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .main-movie-title {
+        margin-top: 1em;
+        margin-bottom: auto;
+        color: white;
+    }
+
+    .movie-description {
+        padding: 5% 10%;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .release-year {
+        font-weight: 700;
+        color: white;
+        font-size: larger;
+        padding-bottom: 6.5em;
+    }
+
+    .all-movies {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        gap: 1.5em;   
+    }
+
+    .movie-section {
+        width: 40%;
+    }
+    
+    .movie-image {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .all-movies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        text-align: center;    
+    }
+
+    .movie-section {
+        width: 250px;
+    }
+
+    .movie-image {
+        width: 200px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: smaller;
+        gap: 0.3em;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .main-movie-title {
+        text-align: center;
+        opacity: 0.8;
+        margin-bottom: 0.3em;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 1em 2em;
+        list-style-type: none;
+        font-size: 19px;
+        font-weight: 600;
+        transition: transform 0.4s ease;
+    }
+
+    nav ul li:hover {
+        transform: scale(1.1);
+    }
+
+    .featured-movie-section {
+        margin: 1em auto;
+    }
+
+    .main-movie-title {
+        margin-top: 1em;
+    }
+
+    .trailer-button {
+        padding: 0.6em;
+        background-color: orangered;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 1.5em;
+    }
+
+    .trailer-button:hover {
+        background-color: rgb(170, 33, 33);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .movie-title {
+        padding: 0 5%;
+    }
+
+    .movie-description {
+        padding-top: 15%;
+        padding-right: 20%;
+        padding-left: 20%;
+        color: white;
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    .release-year {
+        margin-bottom: 10em;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        font-size: larger;
+    }
+
+    .all-movies {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        margin-left: 2em;
+        margin-right: 2em;
+        gap: 1.5em;   
+    }
+
+    .movie-section {
+        max-width: 400px;
+    }
+    
+    .movie-image {
+        min-width: 191px;
+        max-width: 70%;
+        margin-bottom: 0.5em;
+        margin: 0 auto;
+    }
+}
